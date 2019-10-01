@@ -1,0 +1,36 @@
+{
+  "name": "pdb_style",
+  "version": "1.0.0",
+  "description": "Librairie CSS pour La Plateforme du Bâtiment",
+  "scripts": {
+    "dev": "gulp build && http-server | gulp watch",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Core-Techs-Git/pdb_style.git"
+  },
+  "author": "Adimeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Core-Techs-Git/pdb_style/issues"
+  },
+  "homepage": "https://github.com/Core-Techs-Git/pdb_style#readme",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.9.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^9.0.0",
+    "http-server": "^0.11.1",
+    "stylelint": "^10.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "yargs": "^13.2.1"
+  }
+}

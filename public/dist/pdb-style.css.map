@@ -1,0 +1,1 @@
+{"version":3,"sources":["pdb-style.scss","_colors.scss"],"names":[],"mappings":"AAEA,KACE,qBCHa","file":"pdb-style.css","sourcesContent":["@import \"colors\";\n\nbody {\n  background-color: $white;\n}\n","$white: #ffffff;\n$orange: #f87a15;\n$black: #000;\n$dark: #333;\n$light: #f4f4f4;\n"]}
