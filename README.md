@@ -40,6 +40,7 @@ gulp.task('css:libs', () => {
 Cette librairie permet de designer simplement les composants réccurents des sites La Plateforme du Bâtiment.
 - Header
 - Boutons
+- Formulaires
 - Breadcrumb
 - Loader
 - Login form
@@ -47,9 +48,8 @@ Cette librairie permet de designer simplement les composants réccurents des sit
 - Ajout au panier
 - Selection de quantité
 - Carte produit
-- Tableaux
 - Ligne produit
-- Modals
+- Tableau de totaux
 
 Deux thèmes sont inclus :
 - Standard (*pdb-style*) utilisé sur pdb_node, pdb_hermes, pdb_faf
@@ -99,6 +99,25 @@ Pour changer la taille d'un bouton, il faut changer la font-size du parent :
         <button class="pdb-btn btn-orange">Petit bouton</button>
     </div>
 
+### Formulaires
+
+Styliser les champs :
+
+    <input type="text" class="form-input" />
+    <select class="form-input"></select>
+    <textarea class="form-input"></textarea>
+
+Intégrer un champ avec un libellé :
+
+    <div class="form-item">
+        <label for="i1">Libellé</label>
+        <input type="text" class="form-input" id="i1" />
+    </div>
+
+Pour un champ requis :
+
+    <label for="i1" class="required">Libellé</label>
+
 ### Breadcrumb
 ### Loader
 ### Login form
@@ -128,6 +147,21 @@ Modificateur dans une liste :
 ### Carte produit
 ### Tableaux
 ### Ligne produit
+### Tableau des totaux
+
+Le tableau doit être défini avec la classe :
+
+    <table class="pdb-totals-table">
+        ...
+    </table>
+
+Dans celui-ci peut être ajouté les lignes suivantes :
+
+    <tr class="row-primary"><th>Label</th><td>Valeur</td></tr> // Ligne orange
+    <tr class="row-secondary"><th>Label</th><td>Valeur</td></tr> // Ligne noire
+
+    <tr class="row-secondary small"><th>Label</th><td>Valeur</td></tr> // Petite ligne
+
 
 ## Developpement
 

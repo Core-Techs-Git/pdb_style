@@ -1,0 +1,40 @@
+.pdb-totals-table {
+  color: $white;
+  font-size: 1rem;
+  border-top: solid 8px $black;
+  border-bottom: solid 8px $black;
+  .row-primary, .row-secondary {
+    &.small {
+      font-size: 14px;
+    }
+    td {
+      font-weight: bold;
+      text-align: right;
+    }
+    th {
+      text-transform: uppercase;
+      font-weight: normal;
+      text-align: right;
+      font-size: 0.85em;
+    }
+  }
+  .row-secondary {
+    background-color: $black;
+    font-size: 1.125em;
+    td {
+      padding: 5px;
+      font-weight: 500;
+    }
+  }
+  .row-primary {
+    background-color: $orange;
+    font-size: 1.375em;
+    td {
+      padding: 10px 5px;
+    }
+    th {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+  }
+}

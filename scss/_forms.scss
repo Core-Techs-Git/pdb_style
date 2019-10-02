@@ -1,0 +1,40 @@
+input:not([type="submit"]).form-input, select.form-input, textarea.form-input {
+  background-color: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 0.83em 1.5em;
+  box-sizing: border-box;
+  font-style: italic;
+  position: relative;
+  &:focus {
+    outline: solid 2px $black;
+  }
+}
+select:after {
+  content: "\e97c";
+  display: block;
+  position: absolute;
+  font-size: 20px;
+}
+.form-item {
+  margin: 1em 0;
+  label {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    margin-top: 0.2em;
+    display: block;
+    &.required:after {
+      content: ' *';
+      font-size: 2em;
+      line-height: 0.5;
+      vertical-align: middle;
+      font-weight: bold;
+      color: #d11822;
+    }
+  }
+  .form-input {
+    width: 100%;
+  }
+}

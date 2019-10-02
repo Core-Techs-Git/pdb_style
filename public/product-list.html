@@ -1,0 +1,125 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css">
+    <link rel="stylesheet" href="dist/pdb-style.css">
+    <style>
+        .component-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 40px auto;
+        }
+    </style>
+</head>
+<body>
+<table class="product-list-v2 order-details">
+    <tr class="header-row">
+        <th class="main-cell">Articles (1)</th>
+        <th class="middle-cell">
+            <div class="unit-price-cell">Prix unitaire (HT)</div>
+            <div class="quantity-cell">Quantité</div>
+            <div class="total-cell">Total</div>
+        </th>
+    </tr>
+    <tr class="row ng-cloak">
+        <td class="main-cell">
+            <div class="product-wrapper">
+                <div class="product-image" ng-bind-html="cp.image"></div>
+                <div class="right-block">
+                    <div class="label-wrapper">
+                        <a href="/catalogue/produit/{{ cp.product_uid }}" class="product-label" target="_blank">Long label lalalala lalalala lalalala lalalala lalalala</a>
+                    </div>
+                    <div class="ref-wrapper">
+                        <div class="product-ref">Réf. 99999</div><div class="exception_badge"><div class="tooltip"><span>Exception !</span></div></div>
+                    </div>
+                    <div class="product-links">
+                    </div>
+                </div>
+            </div>
+            <div class="bundle-wrapper">
+                <div class="bundle-wrapper-title">
+                    Ce produit est un lot composé de : <span class="arrow"></span>
+                </div>
+                <div class="bundle-components">
+                    <div class="bundle-component">
+                        <div class="product-wrapper">
+                            <div class="product-image"></div>
+                            <div class="right-block">
+                                <div class="label-wrapper">
+                                    <span class="bundle-component-quantity">
+                                        x1
+                                    </span>
+                                    <a href="/catalogue/produit/{{ cpc.product_uid }}" class="product-label" target="_blank">Label</a>
+                                </div>
+                                <div class="ref-wrapper">
+                                    <span class="product-ref">Réf : 99999</span>
+                                </div>
+                                <div class="product-links">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bundle-wrapper">
+                <div class="bundle-wrapper-title">
+                    Ce produit est consigné :
+                </div>
+                <div class="bundle-components deposit">
+                    <div class="bundle-component">
+                        <div class="product-wrapper">
+                            <div class="product-image"></div>
+                            <div class="right-block">
+                                <div class="label-wrapper">
+                                    <span class="bundle-component-quantity">
+                                        x1
+                                    </span>
+                                    <span class="product-label">Deposit label</span>
+                                </div>
+                                <div class="ref-wrapper">
+                                    <span class="product-ref">Réf : 99999</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td class="middle-cell">
+            <div class="middle-cell-wrapper">
+                <div class="unit-price-cell">
+                    <div class="header-label">Prix unitaire :</div>
+                    <div class="unit-price-wrapper" ng-if="cp.is_enabled">
+                        <div class="price">4,00 € /</div>
+                        <div class="unit">pièce</div>
+                        <!--<div class="animated discount_super_bundle" ng-if="cp.discount"><img src="/images/superbundle.svg" alt="Prix dégressif, Lot panaché"></div>-->
+                        <div class="eco-tax">Dont 3,00€ d'eco taxe</div>
+                        <div class="eco-tax">Dont 1,23€ d'eco mobilier</div>
+                    </div>
+                    <div class="deposit-price">
+                        <div>20,00 € /</div>
+                        <div>consigne</div>
+                    </div>
+                </div>
+                <div class="quantity-cell">
+                    <div class="header-label">Quantité :</div>
+                    <div class="quantity">
+                        3
+                    </div>
+                </div>
+                <div class="total-cell">
+                    <div ng-if="cp.is_enabled">
+                        <div class="header-label">Total HT :</div>
+                        <div class="total-price">12,00 €</div>
+                    </div>
+                    <div class="deposit-price-total">
+                        <div class="header-label">Total Consigne HT :</div>
+                        <div class="total-price">20,00 €</div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

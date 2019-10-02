@@ -1,5 +1,5 @@
 {
-  "name": "pdb_style",
+  "name": "@core-techs-git/pdb_style",
   "version": "1.0.0",
   "description": "Librairie CSS pour La Plateforme du Bâtiment",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Core-Techs-Git/pdb_style.git"
+    "url": "git+https://github.com/core-techs-git/pdb_style.git"
   },
   "author": "Adimeo",
   "license": "ISC",
@@ -19,6 +19,9 @@
   "engines": {
     "node": "10.15.3",
     "npm": "6.9.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
