@@ -49,6 +49,7 @@ Cette librairie permet de designer simplement les composants réccurents des sit
 - Carte produit
 - Tableaux
 - Ligne produit
+- Modals
 
 Deux thèmes sont inclus :
 - Standard (*pdb-style*) utilisé sur pdb_node, pdb_hermes, pdb_faf
@@ -57,13 +58,73 @@ Deux thèmes sont inclus :
 ## Documentation
 
 ### Header
+
+    <header class="pdb-header">
+        <div class="pdb-branding">
+            <a href="/" title="Retour à l'accueil">
+                <img src="https://www.laplateforme.com/cms/i?o=%2Fsites%2Fdefault%2Ffiles%2F2017-04%2Flogo_pdb_bsl-1.jpg" alt="Logo de la plateforme du bâtiment">
+            </a>
+        </div>
+        <div class="header-items-container">
+            <a href="/" class="header-item">
+                <i class="fi fi-shopping-store icon"></i>
+                <div class="header-item-label">Dépôt</div>
+            </a>
+            <div class="header-item">
+                <i class="fi fi-shopping-basket icon"></i>
+                <div class="header-item-label">Panier</div>
+            </div>
+        </div>
+    </header>
+
 ### Boutons
+
+Les trois types de boutons :
+
+    <button class="pdb-btn btn-orange">Bouton orange</button>
+    <button class="pdb-btn btn-black">Bouton noir</button>
+    <button class="pdb-btn btn-clear">Bouton transparent</button>
+
+Un bouton désactivé :
+
+    <button class="pdb-btn btn-black" disabled>Bouton disabled</button>
+
+Pour changer la taille d'un bouton, il faut changer la font-size du parent :
+
+    <div style="font-size: 20px">
+        <button class="pdb-btn btn-orange">Gros bouton</button>
+    </div>
+
+    <div style="font-size: 12px">
+        <button class="pdb-btn btn-orange">Petit bouton</button>
+    </div>
+
 ### Breadcrumb
 ### Loader
 ### Login form
 ### Cartouche prix
 ### Ajout au panier
 ### Selection de quantité
+
+Selecteur associé à un bouton d'ajout :
+
+    <div class="quantity-selector express-style">
+        <button class="quantity-adjust-btn" type="button"><i class="fi fi-minus-a"></i></button>
+        <input type="number" class="product-quantity" min="1" maxlength="4">
+        <button class="quantity-adjust-btn" type="button"><i class="fi fi-plus-a"></i></button>
+    </div>
+
+Pour changer la taille du selecteur, il faut changer la font-size du parent.
+
+
+Modificateur dans une liste :
+
+    <div class="quantity-selector list-style">
+        <button class="quantity-adjust-btn" type="button"><i class="fi fi-minus-a"></i></button>
+        <input type="number" class="product-quantity"min="1" maxlength="4">
+        <button class="quantity-adjust-btn" type="button"><i class="fi fi-plus-a"></i></button>
+    </div>
+
 ### Carte produit
 ### Tableaux
 ### Ligne produit
@@ -76,5 +137,5 @@ Deux thèmes sont inclus :
 - Se rendre sur http://127.0.0.1:8080
 - Activer l'extension LiveReload
 - Tout changement sur les fichiers sass sont pris en compte immédiatement
-- Le code HTML des composants doit se trouver dans `public/components`
+- Le code HTML des composants doit se trouver dans `public/index.html`
 

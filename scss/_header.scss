@@ -1,0 +1,46 @@
+.pdb-header {
+  background-color: $light;
+  border-bottom: solid 1px $gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  .pdb-branding {
+    padding: 10px 0 6px 5px;
+    img {
+      width: 107px;
+      height: auto;
+      mix-blend-mode: darken;
+    }
+  }
+  .header-items-container {
+    display: flex;
+    height: 50px;
+    .header-item {
+      display: flex;
+      width: 60px;
+      height: 100%;
+      cursor: pointer;
+      border-left: solid 1px $white;
+      justify-content: center;
+      align-items: center;
+      .icon {
+        font-size: 25px;
+        color: $dark;
+      }
+      .header-item-label {
+        display: none;
+      }
+      &:hover {
+        background-color: $white;
+      }
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+}

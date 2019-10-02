@@ -1,5 +1,7 @@
 @import "colors";
-
-body {
-  background-color: $white;
-}
+@import "rawline";
+@import "normalize";
+@import "header";
+@import "buttons";
+@import "quantity-selector";
+@import "price-wrapper";

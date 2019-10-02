@@ -1,0 +1,88 @@
+.quantity-selector {
+  display: block;
+  .quantity-adjust-btn {
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+  }
+  // Style pour modifier la quantité dans une liste (tableau) de produits
+  &.list-style {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    .quantity-adjust-btn {
+      border: solid 1px transparent;
+      background-color: #eceaeb;
+      border-radius: 0;
+      height: 100%;
+      width: 30px;
+      line-height: 1em;
+      font-size: 1.1em;
+      &:first-child {
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+      }
+      &:last-child {
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+      }
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: default;
+      }
+      &:hover {
+        background-color: #d9d9d9;
+      }
+    }
+    .product-quantity {
+      display: inline-block;
+      border: solid 1px #ecebeb;
+      width: 50px;
+      font-size: 20px;
+      padding: 0;
+      text-align: center;
+      vertical-align: middle;
+      height: 100%;
+      @media (max-width: 1024px) {
+        font-size: 18px;
+        width: 48px;
+      }
+    }
+  }
+  // Style pour le choix de quantité à ajouter dans une liste (tableau)
+  &.express-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.1875em;
+    .quantity-adjust-btn {
+      border: solid 1px #d9d9d9;
+      background-color: #fff;
+      border-radius: 30%;
+      width: 1.5625em;
+      height: 1.5625em;
+      font-size: 1em;
+      padding: 0;
+      line-height: 0.2em;
+      &:hover {
+        background-color: #eceaeb;
+      }
+    }
+    .product-quantity{
+      font-family: "rawline", sans-serif;
+      border: transparent;
+      border-bottom: solid 1px #c3c2c2;
+      width: 3.125em;
+      font-size: 1.25em;
+      padding-bottom: 2px;
+      background-color: transparent;
+      text-align: center;
+    }
+  }
+}
