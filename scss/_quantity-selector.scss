@@ -17,6 +17,11 @@
       background-size: 0.7em;
     }
   }
+  .product-quantity {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
   // Style pour modifier la quantité dans une liste (tableau) de produits
   &.list-style {
     text-align: center;
