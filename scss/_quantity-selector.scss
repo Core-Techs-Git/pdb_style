@@ -6,6 +6,16 @@
     cursor: pointer;
     vertical-align: middle;
     text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.rm-q {
+      background-image: url('/dist/assets/icons/minus.svg');
+      background-size: 0.7em;
+    }
+    &.add-q {
+      background-image: url('/dist/assets/icons/plus.svg');
+      background-size: 0.7em;
+    }
   }
   // Style pour modifier la quantité dans une liste (tableau) de produits
   &.list-style {
@@ -69,7 +79,6 @@
       height: 1.5625em;
       font-size: 1em;
       padding: 0;
-      line-height: 0.2em;
       &:hover {
         background-color: #eceaeb;
       }
