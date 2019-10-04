@@ -1,6 +1,6 @@
 {
   "name": "@core-techs-git/pdb_style",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Librairie CSS pour La Plateforme du Bâtiment",
   "scripts": {
     "dev": "gulp build && http-server | gulp watch",
