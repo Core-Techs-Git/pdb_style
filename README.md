@@ -50,6 +50,7 @@ Cette librairie permet de designer simplement les composants réccurents des sit
 - Carte produit
 - Ligne produit
 - Tableau de totaux
+- Modales
 
 Deux thèmes sont inclus :
 - Standard (*pdb-style*) utilisé sur pdb_node, pdb_hermes, pdb_faf
@@ -162,6 +163,21 @@ Dans celui-ci peut être ajouté les lignes suivantes :
 
     <tr class="row-secondary small"><th>Label</th><td>Valeur</td></tr> // Petite ligne
 
+### Modales
+
+    <div class="modal">
+        <div class="modal-dialog">
+            <div class="window">
+                <div class="close-modal"></div>
+                <div class="title">Titre</div>
+                <div class="content">...</div>
+                <div class="actions">
+                    <button class="pdb-btn btn-orange">Ok</button>
+                    <button class="pdb-btn btn-clear">Annuler</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 ## Developpement
 

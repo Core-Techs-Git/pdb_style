@@ -1,0 +1,57 @@
+.modal {
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  color: #000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .modal-dialog {
+    transform: translate(0,0);
+    margin: 1.75rem auto;
+    max-width: 500px;
+    min-height: calc(100% - (1.75rem * 2));
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: auto;
+    @media screen and (max-width: 540px){
+      max-width: calc(100vw - 40px);
+    }
+  }
+  .window {
+    background-color: #ecebeb;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    .close-modal {
+      position: absolute;
+      right: 20px;
+      width: 33px;
+      height: 33px;
+      overflow: hidden;
+      text-indent: 999px;
+      background: url('/dist/assets/icons/cross.svg') no-repeat center;
+      background-size: 15px;
+      cursor: pointer;
+    }
+    .actions {
+      margin-top: 16px;
+      display: flex;
+      justify-content: flex-end;
+      > * {
+        margin-left: 10px;
+      }
+    }
+  }
+}
