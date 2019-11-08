@@ -27,7 +27,7 @@
         <textarea class="form-input"></textarea>
     </div>
     <div class="component-wrapper">
-        <form action="" style="width: 100%; max-width: 800px">
+        <form action="" style="width: 100%; max-width: 800px; font-size: 16px;">
             <div class="form-item">
                 <label for="input1">Label</label>
                 <input type="text" class="form-input" id="input1" placeholder="Placeholder">
@@ -35,6 +35,23 @@
             <div class="form-item">
                 <label for="input2" class="required">Label champ requis</label>
                 <input type="text" class="form-input" id="input2" placeholder="Placeholder">
+            </div>
+            <div class="form-item">
+                <label for="select" class="required">Choisir</label>
+                <select class="form-input" id="select">
+                    <option value="">- Choix -</option>
+                </select>
+            </div>
+            <div class="form-item has-error">
+                <label for="input3" class="required">Label error</label>
+                <input type="text" class="form-input" id="input3" placeholder="Placeholder">
+                <div class="form-error">Ce champ est requis</div>
+            </div>
+            <div class="form-item has-error" style="font-size: 12px;">
+                <label for="input4" class="required">Petit</label>
+                <input type="text" class="form-input" id="input4" placeholder="Placeholder">
+                <div class="form-error">Ce champ est requis</div>
+                <div class="form-error">Deuxième erreur</div>
             </div>
         </form>
     </div>

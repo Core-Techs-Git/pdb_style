@@ -1,7 +1,7 @@
 input:not([type="submit"]).form-input, select.form-input, textarea.form-input {
   background-color: #fff;
   border: none;
-  font-size: 1rem;
+  font-size: 1em;
   padding: 0.83em 1.5em;
   box-sizing: border-box;
   font-style: italic;
@@ -9,12 +9,6 @@ input:not([type="submit"]).form-input, select.form-input, textarea.form-input {
   &:focus {
     outline: solid 2px $black;
   }
-}
-select:after {
-  content: "\e97c";
-  display: block;
-  position: absolute;
-  font-size: 20px;
 }
 .form-item {
   margin: 1em 0;
@@ -31,10 +25,28 @@ select:after {
       line-height: 0.5;
       vertical-align: middle;
       font-weight: bold;
-      color: #d11822;
+      color: $red;
     }
   }
   .form-input {
     width: 100%;
   }
+  &.has-error {
+    .form-input {
+      outline: solid 2px $red;
+      outline-offset: -2px;
+    }
+  }
+}
+select.form-input {
+  background-image: url('/dist/assets/icons/select.svg');
+  background-size: 1em;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 3em;
+}
+.form-error {
+  color: $red;
+  font-weight: 500;
+  font-size: 0.85em;
 }
