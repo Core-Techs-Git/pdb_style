@@ -3,7 +3,7 @@
   max-width: 143px;
 }
 .route-product #intro aside .prices-wrapper-v3 > .price-wrapper-v3 {
-  background-color: #fff;
+  background-color: $white;
 }
 .route-product #intro aside .prices-wrapper-v3 {
   float: right;
@@ -25,7 +25,7 @@
 .prices-wrapper-v3 > .price-wrapper-v3 {
   width: 100%;
   height: 45px;
-  background-color: #ecebeb;
+  background-color: $lighten;
   text-align: center;
   padding-top: 4px;
   box-sizing: border-box;

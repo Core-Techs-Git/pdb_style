@@ -1,5 +1,7 @@
+@import "colors";
+
 input:not([type="submit"]).form-input, select.form-input, textarea.form-input {
-  background-color: #fff;
+  background-color: $white;
   border: none;
   font-size: 1em;
   padding: 0.83em 1.5em;
@@ -49,4 +51,9 @@ select.form-input {
   color: $red;
   font-weight: 500;
   font-size: 0.85em;
+}
+form.revert {
+  input:not([type="submit"]).form-input, select.form-input, textarea.form-input {
+    background-color: $light;
+  }
 }

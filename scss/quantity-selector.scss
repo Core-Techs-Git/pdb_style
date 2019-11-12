@@ -1,3 +1,5 @@
+@import "colors";
+
 .quantity-selector {
   display: block;
   .quantity-adjust-btn {
@@ -32,7 +34,7 @@
     height: 35px;
     .quantity-adjust-btn {
       border: solid 1px transparent;
-      background-color: #eceaeb;
+      background-color: $lighten;
       border-radius: 0;
       height: 100%;
       width: 30px;
@@ -52,12 +54,12 @@
         cursor: default;
       }
       &:hover {
-        background-color: #d9d9d9;
+        background-color: $gray;
       }
     }
     .product-quantity {
       display: inline-block;
-      border: solid 1px #ecebeb;
+      border: solid 1px $lighten;
       width: 50px;
       font-size: 20px;
       padding: 0;
@@ -77,21 +79,21 @@
     align-items: center;
     height: 2.1875em;
     .quantity-adjust-btn {
-      border: solid 1px #d9d9d9;
-      background-color: #fff;
+      border: solid 1px $gray;
+      background-color: $white;
       border-radius: 30%;
       width: 1.5625em;
       height: 1.5625em;
       font-size: 1em;
       padding: 0;
       &:hover {
-        background-color: #eceaeb;
+        background-color: $lighten;
       }
     }
     .product-quantity{
       font-family: "rawline", sans-serif;
       border: transparent;
-      border-bottom: solid 1px #c3c2c2;
+      border-bottom: solid 1px $darker;
       width: 3.125em;
       font-size: 1.25em;
       padding-bottom: 2px;

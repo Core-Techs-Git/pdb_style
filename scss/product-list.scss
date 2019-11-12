@@ -1,18 +1,20 @@
+@import "colors";
+
 .product-list-v2 {
   table-layout: fixed;
   th, tr {
     border: none;
   }
   td {
-    background-color: #fff;
+    background-color: $white;
   }
   .product-deleted{
-    border-bottom: solid 1px #eceaeb;
+    border-bottom: solid 1px $lighten;
   }
   .link {
     background: transparent;
     border: none;
-    color: #333333;
+    color: $dark;
     font-size: 0.75em;
     text-decoration: underline;
     font-weight: 600;
@@ -33,9 +35,9 @@
       font-size: 0.75rem;
       font-weight: 700;
       display: table-cell;
-      background-color: #000;
+      background-color: $black;
       text-align: center;
-      color: #fff;
+      color: $white;
       text-transform: uppercase;
       @media (max-width: 1024px) {
         &.total-cell, &.unit-price-cell {
@@ -93,18 +95,18 @@
     display: table-row;
     table-layout: fixed;
     border-collapse: separate;
-    background-color: #fff;
+    background-color: $white;
     position: relative;
     @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
-      border-bottom: solid 2px #eceaeb!important;
+      border-bottom: solid 2px $lighten!important;
     }
 
     > * {
       display: table-cell;
       @media (min-width: 769px) {
-        border-bottom: solid 2px #eceaeb;
+        border-bottom: solid 2px $lighten;
       }
       @media (max-width: 768px) {
         display: block;
@@ -136,7 +138,7 @@
         height: 93px;
         background: url('/dist/assets/images/default-210x210.png') no-repeat center;
         background-size: 100%;
-        border: solid 1px #eceaeb;
+        border: solid 1px $lighten;
         img {
           width: 91px;
           height: 91px;
@@ -162,7 +164,7 @@
           font-size: 1em;
           font-weight: bold;
           display: inline;
-          color: #333;
+          color: $dark;
           text-decoration: none;
           @media (max-width: 1024px) {
             font-size: 0.875em;
@@ -184,7 +186,7 @@
 
       .bundle-wrapper {
         .bundle-wrapper-title {
-          color: #f87a15;
+          color: $orange;
           margin-top: 2em;
           text-transform: uppercase;
           font-weight: 800;
@@ -238,7 +240,7 @@
               height: 0;
               border-style: solid;
               border-width: 4px 0 4px 5px;
-              border-color: transparent transparent transparent #626262;
+              border-color: transparent transparent transparent $darker;
             }
 
             img {
@@ -259,8 +261,8 @@
             position: absolute;
             left: -18px;
             bottom: -70px;
-            border-left: solid 3px #626262;
-            border-bottom: solid 3px #626262;
+            border-left: solid 3px $darker;
+            border-bottom: solid 3px $darker;
             border-top: solid 3px transparent;
             border-radius: 3px;
           }
@@ -278,7 +280,7 @@
           .bundle-component-quantity {
             font-weight: 800;
             font-size: 1.125em;
-            color: #f87a15;
+            color: $orange;
           }
         }
       }
@@ -306,7 +308,7 @@
           display: none;
         }
         .orange {
-          color: #f87a15;
+          color: $orange;
           font-weight: 800;
         }
       }
@@ -408,7 +410,7 @@
           }
 
           .availability {
-            color: #15ae12;
+            color: $green;
           }
         }
 
@@ -419,7 +421,7 @@
           }
 
           .availability {
-            color: #f87a15;
+            color: $orange;
           }
         }
 
@@ -430,7 +432,7 @@
           }
 
           .availability {
-            color: #d11822;
+            color: $red;
           }
         }
       }
@@ -510,7 +512,7 @@
       .row {
         display: flex;
         flex-direction: column;
-        border-bottom: solid 2px #eceaeb !important;
+        border-bottom: solid 2px $lighten !important;
         > * {
           display: block;
           width: 100%;
@@ -561,7 +563,7 @@
         animation: notificationFadeOut 0.5s ease;
       }
       span, button {
-        color: #dd2a2a;
+        color: $red;
         text-transform: uppercase;
         font-size: 1.1875rem;
         font-weight: bold;
