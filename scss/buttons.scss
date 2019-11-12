@@ -49,4 +49,28 @@
     //font-size: 1.25em;
     vertical-align: -1px;
   }
+  .loader-wrapper {
+    display: none;
+  }
+  &.btn-processing {
+    position: relative;
+    border-color: $lighten;
+    background-color: $lighten;
+    cursor: progress;
+    .loader-wrapper {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding: 0;
+      background-color: $lighten;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      .loader {
+        font-size: 0.625em;
+      }
+    }
+  }
 }
