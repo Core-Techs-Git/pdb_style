@@ -1,3 +1,5 @@
+@import "colors";
+
 .prices-wrapper-v3 {
   width: 100%;
   max-width: 143px;
@@ -38,7 +40,7 @@
   display: table;
   table-layout: fixed;
   width: 100%;
-  background-color: #feec01;
+  background-color: $yellow;
   border-radius: 2px;
 }
 .quantity-prices-wrapper-v3 > .quantity-price-wrapper .quantity-wrapper, .quantity-prices-wrapper-v3 > .quantity-price-wrapper .inner-price-wrapper {
@@ -47,8 +49,8 @@
 .quantity-prices-wrapper-v3 > .quantity-price-wrapper .quantity-wrapper {
   width: 45px;
   font-size: 14px;
-  background-color: #000;
-  color: #fff;
+  background-color: $black;
+  color: $white;
   font-weight: bold;
   text-align: center;
   border-radius: 2px;
@@ -61,7 +63,7 @@
   font-size: 16px;
 }
 .price-wrapper-v3.promo, .price-wrapper-v3.FDS {
-  background-color: #feec01!important;
+  background-color: $yellow!important;
 }
 .price-wrapper-v3.with-top-container {
   height: 58px;
@@ -73,21 +75,21 @@
 .price-wrapper-v3 .top-container {
   line-height: initial;
   font-size: 9px;
-  background-color: #000;
+  background-color: $black;
   padding: 0px 0 1px 0;
   border-radius: 2px;
-  color: #fff;
+  color: $white;
   font-weight: bold;
 }
 .price-wrapper-v3.crossed {
   position: relative;
-  background-color: #000!important;
-  color: #fff!important;
+  background-color: $black!important;
+  color: $white!important;
 }
 .price-wrapper-v3.crossed:before {
   content: "";
   display: block;
-  background-color: red;
+  background-color: $red;
   width: 90%;
   height: 3px;
   position: absolute;
@@ -96,9 +98,9 @@
   transform: rotate(-10deg);
 }
 .price-wrapper-v3.FDS .top-container{
-  background-color: #333;
-  color: #feec01;
-  border-top: dashed 2px #feec01;
+  background-color: $dark;
+  color: $yellow;
+  border-top: dashed 2px yellow;
 }
 .price-wrapper-v3.one-line {
   line-height: 45px;
