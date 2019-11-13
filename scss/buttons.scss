@@ -18,6 +18,7 @@
   font-family: 'rawline', sans-serif;
   &:hover {
     opacity: 0.7;
+    text-decoration: none;
   }
   &.btn-orange {
     border-color: $orange;
@@ -26,6 +27,11 @@
   &.btn-black {
     border-color: $black;
     background-color: $black;
+  }
+  &.btn-yellow {
+    border-color: $yellow;
+    background-color: $yellow;
+    color: $black;
   }
   &.btn-clear {
     border-color: $dark;
