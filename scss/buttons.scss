@@ -79,4 +79,47 @@
       }
     }
   }
+  &.add-to-cart {
+    overflow: hidden;
+    position: relative;
+    padding-left: calc(40px + .75rem);
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 28px;
+      height: 76px;
+      top:3px;
+      left: .75rem;
+      background: url("/dist/assets/icons/addToCartSuccess.svg") no-repeat left center;
+      background-size: 28px;
+    }
+    &.ok {
+      &:before {
+        animation: add-to-cart 2s ease infinite;
+      }
+    }
+    &.small {
+      &:before {
+        width: 100%;
+        background-position: center;
+        left: 0;
+      }
+      height: calc(28px + .75rem);
+    }
+    @keyframes add-to-cart {
+      0% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(-48px);
+      }
+      70% {
+        transform: translateY(-48px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
 }
