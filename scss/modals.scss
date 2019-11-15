@@ -18,6 +18,7 @@
     min-height: calc(100% - (1.75rem * 2));
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     width: auto;
     @media screen and (max-width: 540px){
@@ -35,6 +36,7 @@
       font-size: 1.5rem;
       font-weight: bold;
       margin-bottom: 16px;
+      padding-right: 40px;
     }
     .close-modal {
       position: absolute;
