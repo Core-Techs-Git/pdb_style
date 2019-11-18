@@ -5,6 +5,9 @@
   font-size: 1rem;
   border-top: solid 8px $black;
   border-bottom: solid 8px $black;
+  td, th {
+    line-height: normal;
+  }
   .row-primary, .row-secondary {
     &.small {
       font-size: 14px;

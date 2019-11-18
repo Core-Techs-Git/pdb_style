@@ -1,0 +1,46 @@
+@import "colors";
+
+.pdb-data-table {
+  border: solid 1px $gray;
+  font-size: 0.75rem;
+  th {
+    background-color: $black;
+    color: $white;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 15px 0;
+    line-height: 1;
+  }
+  tr {
+    border-bottom: solid 1px $gray;
+    &[ng-click] {
+      cursor: pointer;
+      &:hover {
+        td {
+          background-color: $light;
+        }
+      }
+    }
+  }
+  td {
+    background-color: $white;
+    color: $dark;
+    padding: 10px 3px;
+    &.actions {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  .hide-mob {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .mob-row {
+    display: none;
+    border-bottom: none;
+    @media (max-width: 768px) {
+      display: table-row;
+    }
+  }
+}
