@@ -26,6 +26,7 @@
     background-color: $white;
     color: $dark;
     padding: 10px 3px;
+    vertical-align: middle;
     &.actions {
       display: flex;
       justify-content: space-around;
@@ -33,7 +34,7 @@
   }
   .hide-mob {
     @media (max-width: 768px) {
-      display: none;
+      display: none!important;
     }
   }
   .mob-row {
