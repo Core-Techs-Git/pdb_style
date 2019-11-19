@@ -40,7 +40,8 @@
     }
     .close-modal {
       position: absolute;
-      right: 20px;
+      right: 10px;
+      top: 10px;
       width: 33px;
       height: 33px;
       overflow: hidden;
@@ -48,6 +49,10 @@
       background: url('/dist/assets/icons/cross.svg') no-repeat center;
       background-size: 15px;
       cursor: pointer;
+      border: none;
+    }
+    .content {
+      margin-top: 16px;
     }
     .actions {
       margin-top: 16px;
@@ -57,5 +62,18 @@
         margin-left: 10px;
       }
     }
+  }
+  // Animations
+  &.ng-enter {
+    -webkit-animation: fadeIn 0.2s ease;
+    animation: fadeIn 0.2s ease;
+    .window{
+      -webkit-animation: showWindow 0.2s ease;
+      animation: showWindow 0.2s ease;
+    }
+  }
+  &.ng-leave {
+    -webkit-animation: fadeOut 0.2s ease;
+    animation: fadeOut 0.2s ease;
   }
 }
