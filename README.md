@@ -102,13 +102,17 @@ Pour changer la taille d'un bouton, il faut changer la font-size du parent :
 
 ### Formulaires
 
-Styliser les champs :
+Ajouter la classe `pdb-form` sur la balise `<form>` pour gérer le responsive des champs ! Lui définir une font-size en px permet de changer la taille des champs.
+
+Ajouter la classe `revert` sur la balise `<form>` pour un fond blanc.
+
+Styliser les champs, ajouter la classe `form-input`:
 
     <input type="text" class="form-input" />
     <select class="form-input"></select>
     <textarea class="form-input"></textarea>
 
-Intégrer un champ avec un libellé :
+Intégrer un champ avec un libellé, utiliser un wrapper avec la classe `form-item`:
 
     <div class="form-item">
         <label for="i1">Libellé</label>
@@ -119,8 +123,65 @@ Pour un champ requis :
 
     <label for="i1" class="required">Libellé</label>
 
+Champ en erreur, ajouter la classe `has-error` et spéficier les messages d'erreur avec `form-error`:
+
+    <div class="form-item has-error">
+        <label for="i1">Libellé</label>
+        <input type="text" class="form-input" id="i1" />
+        <div class="form-error">Ce champ est requis</div>
+    </div>
+
+Checkbox
+
+    <div class="form-item">
+        <label>Checkbox</label>
+        <input type="checkbox" name="cb" id="cb">
+        <label for="cb">Not checked</label>
+        <input type="checkbox" name="cb" id="cb2" checked>
+        <label for="cb2">Checked</label>
+    </div>
+
+Radio
+
+    <div class="form-item">
+        <label>Radio Button</label>
+        <input type="radio" name="rad" id="rad">
+        <label for="rad">Radio 1</label>
+        <input type="radio" name="rad" id="rad2">
+        <label for="rad2">Radio 2</label>
+    </div>
+
+Champ avec prefix et suffix, utiliser un wrapper avec la classe `form-group`
+
+    <div class="form-item">
+        <label>Montant HT</label>
+        <div class="form-group">
+            <label>Prefix</label>
+            <input type="text" class="form-input">
+            <div>Suffix</div>
+        </div>
+    </div>
+
+Dates, ajouter la classe `form-date` sur l'input
+
+    <div class="form-item">
+        <label>Dates</label>
+        <div class="form-group">
+            <label for="dateFrom1">Du</label>
+            <input type="text" class="form-input form-date" id="dateFrom1" placeholder="__/__/____">
+        </div>
+        <div class="form-group">
+            <label for="dateTo1">Au</label>
+            <input type="text" class="form-input form-date" id="dateTo1" placeholder="__/__/____">
+        </div>
+    </div>
 ### Breadcrumb
 ### Loader
+
+    <div class="loader-wrapper">
+        <div class="loader">Chargement en cours...</div>
+    </div>
+
 ### Login form
 ### Cartouche prix
 ### Ajout au panier

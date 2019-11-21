@@ -1,6 +1,6 @@
 @import "colors";
 
-input:not([type="submit"]).form-input, select.form-input, textarea.form-input {
+input:not([type="submit"]).form-input, select.form-input, textarea.form-input, .form-group label, .form-group .form-input + div {
   background-color: $white;
   border: none;
   font-size: 1em;
@@ -8,6 +8,7 @@ input:not([type="submit"]).form-input, select.form-input, textarea.form-input {
   box-sizing: border-box;
   font-style: italic;
   position: relative;
+  line-height: normal;
   &:focus {
     outline: solid 2px $black;
   }
@@ -39,6 +40,82 @@ input:not([type="submit"]).form-input, select.form-input, textarea.form-input {
       outline-offset: -2px;
     }
   }
+  [type="checkbox"], [type="radio"]{
+    position: absolute;
+    left: -9999px;
+    + label {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      line-height: 22px;
+      color: $dark;
+      font-weight: normal;
+      font-style: italic;
+      text-transform: initial;
+      &:before {
+        content: '';
+        border: solid 2px $gray;
+        border-radius: 4px;
+        background-color: $white;
+        width:22px;
+        height:22px;
+        box-sizing: border-box;
+        position: absolute;
+        left:0;
+      }
+    }
+  }
+  [type="checkbox"]:checked + label:before {
+    background: url('/dist/assets/icons/check.svg') no-repeat 50% 50% #fff;
+  }
+  input[type="radio"]{
+    display: none;
+    + label{
+      &:before{
+        border-radius: 50%;
+      }
+    }
+    &:checked + label:after{
+      content: '';
+      display: block;
+      position: absolute;
+      height: 14px;
+      width: 14px;
+      background-color: $orange;
+      top: 4px;
+      left: 4px;
+      border-radius: 50%;
+    }
+  }
+  .form-group {
+    display: flex;
+    margin-bottom: 0.5em;
+    margin-top: 0.2em;
+    label {
+      font-weight: normal;
+      text-transform: initial;
+      color: $darker;
+      margin: 0;
+      padding-right: .75em;
+    }
+    .form-input {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+    .form-input + div {
+      color: $darker;
+      padding-left: .75em;
+    }
+  }
+  .form-date.form-input {
+    padding-left: .75em;
+    background-image: url('/dist/assets/icons/calendar.svg');
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+    background-position: right 1.5em center;
+    padding-right: 3em;
+    width: 10em;
+  }
 }
 select.form-input {
   background-image: url('/dist/assets/icons/select.svg');
@@ -52,8 +129,29 @@ select.form-input {
   font-weight: 500;
   font-size: 0.85em;
 }
-form.revert {
-  input:not([type="submit"]).form-input, select.form-input, textarea.form-input {
-    background-color: $light;
+.pdb-form {
+  padding: 1em;
+  font-size: 16px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+  &.revert {
+    input:not([type="submit"]).form-input, select.form-input, textarea.form-input {
+      background-color: $light;
+    }
+  }
+  &.col {
+    @media (min-width: 480px) {
+      display: flex;
+      .form-col {
+        width: 50%;
+        &:first-child {
+          padding-right: 1em;
+        }
+        &:last-child {
+          padding-left: 1em;
+        }
+      }
+    }
   }
 }
