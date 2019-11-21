@@ -185,6 +185,14 @@ Dates, ajouter la classe `form-date` sur l'input
 ### Login form
 ### Cartouche prix
 ### Ajout au panier
+
+    <button class="pdb-btn btn-orange add-to-cart">Ajouter au panier</button>
+
+Ajouter la classe `ok` pour déclancher l'animation de confirmation d'ajout au panier
+
+Ajouter la classe `small` pour afficher uniquement l'icône
+
+
 ### Selection de quantité
 
 Selecteur associé à un bouton d'ajout :
@@ -208,6 +216,25 @@ Modificateur dans une liste :
 
 ### Carte produit
 ### Tableaux
+
+Le tableau de données doit être défini avec la classe :
+
+    <table class="pdb-data-table">
+        ...
+    </table>
+
+Pour afficher une ligne seulement en mobile :
+
+    <tr class="mob-row">
+        ...
+    </tr>
+
+Pour cacher une cellule en mobile :
+
+    <td classe="hide-mob">
+        ...
+    </td>
+
 ### Ligne produit
 ### Tableau des totaux
 
