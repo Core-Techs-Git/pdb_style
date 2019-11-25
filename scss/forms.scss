@@ -41,7 +41,7 @@ input:not([type="submit"]).form-input, select.form-input, textarea.form-input, .
     }
   }
   [type="checkbox"], [type="radio"]{
-    position: absolute;
+    position: absolute!important;
     left: -9999px;
     + label {
       position: relative;
