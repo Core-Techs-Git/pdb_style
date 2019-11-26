@@ -66,7 +66,7 @@ input:not([type="submit"]).form-input, select.form-input, textarea.form-input, .
     }
   }
   [type="checkbox"]:checked + label:before {
-    background: url('/dist/assets/icons/check.svg') no-repeat 50% 50% #fff;
+    background: url('/dist/assets/icons/check.svg') no-repeat 50% 50% $white;
   }
   input[type="radio"]{
     display: none;

@@ -3,10 +3,10 @@
 .product-list-v2 {
   table-layout: fixed;
   th, tr {
-    border: none;
+    border: none!important;
   }
   td {
-    background-color: $white;
+    background-color: $white!important;
   }
   .product-deleted{
     border-bottom: solid 1px $lighten;
@@ -33,7 +33,7 @@
     > * {
       padding: 15px 0;
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: 500;
       display: table-cell;
       background-color: $black;
       text-align: center;
@@ -127,10 +127,6 @@
       vertical-align: middle;
       .product-wrapper {
         display: flex;
-        position: relative;
-        .right-block {
-          flex: 1;
-        }
       }
       .product-image {
         margin-right: 20px;
@@ -148,8 +144,6 @@
         padding: 20px 15px;
         .product-image {
           margin-right: 15px;
-          width: 70px;
-          height: 70px;
           img {
             width: 68px;
             height: 68px;
@@ -469,7 +463,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .add-to-cart-btn {
+      .add-to-cart.pdb-btn {
         width: 80px;
       }
       .select-wrapper {
@@ -494,7 +488,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      .add-to-cart-btn {
+      .add-to-cart.pdb-btn {
         width: 80px;
       }
       .store-order {
@@ -544,6 +538,7 @@
   &.cart {
     .main-cell {
       > .product-wrapper {
+        position: relative;
         @media (max-width: 768px) {
           flex-direction: column-reverse;
         }
