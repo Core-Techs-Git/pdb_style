@@ -137,7 +137,7 @@ select.form-input {
   }
   &.revert {
     input:not([type="submit"]).form-input, select.form-input, textarea.form-input {
-      background-color: $light;
+      background-color: $lighten;
     }
   }
   &.col {
