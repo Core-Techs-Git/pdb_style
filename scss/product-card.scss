@@ -1,5 +1,3 @@
-@import "colors";
-
 .user-logged-in .product-card-v3 .actions-wrapper {
   border-left: solid 1px $lighten;
   padding-left: 9px;
@@ -40,6 +38,21 @@
   .label-wrapper {
     text-align: center;
     line-height: 1;
+  }
+  &:not(.wide-mode) .brand-wrapper {
+    position:absolute;
+    bottom:140px;
+    left: 5px;
+    width:33%;
+    @media screen and (max-width:768px){
+      bottom:120px;
+    }
+    img, a{
+      width:100%;
+      max-height:50px;
+      object-fit: contain;
+    }
+
   }
   .product-label {
     font-size: 0.9375rem;
@@ -112,7 +125,10 @@
       .product-ref {
         float: right;
         width: 100px;
-
+        @media screen and (max-width:768px){
+          width:80px;
+          margin-right: -7px;
+        }
       }
     }
     .label-wrapper {
