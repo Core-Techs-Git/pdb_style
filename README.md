@@ -41,9 +41,7 @@ Cette librairie permet de designer simplement les composants réccurents des sit
 - Header
 - Boutons
 - Formulaires
-- Breadcrumb
 - Loader
-- Login form
 - Cartouche prix
 - Ajout au panier
 - Selection de quantité
@@ -175,15 +173,60 @@ Dates, ajouter la classe `form-date` sur l'input
             <input type="text" class="form-input form-date" id="dateTo1" placeholder="__/__/____">
         </div>
     </div>
-### Breadcrumb
+
 ### Loader
 
     <div class="loader-wrapper">
         <div class="loader">Chargement en cours...</div>
     </div>
 
-### Login form
 ### Cartouche prix
+
+    <div class="prices-wrapper-v3">
+        <div class="price-wrapper-v3
+                 FDS // Life cycle : Determine le style du top-container (noir ou haché jaune)
+                 with-top-container // Ajouter si le cartouche prix à un top-container
+                 one-line // Ajouter si il n'y a pas de sub-price
+                 crossed // Ajouter si c'est un prix barré
+            ">
+            <div class="top-container">PROMOTION</div> // Texte au dessus du cartouche prix
+            <div class="main-price">
+                <div class="before-comma price-text">
+                    9999
+                </div><div class="after-comma price-text">
+                ,99
+            </div>
+                <div class="right-wrapper">
+                    <div class="ht price-text">€HT</div>
+                    <div class="unit price-text">/unité</div>
+                </div>
+            </div>
+            <div class="sub-price"> // Pour l'unité commerciale
+                commercialMessage
+            </div>
+        </div>
+        <div class="quantity-prices-wrapper-v3"> // Prix quantité
+            <div class="quantity-price-wrapper">
+                <div class="quantity-wrapper">
+                    <span class="quantity">x9999</span>
+                </div>
+                <div class="inner-price-wrapper">
+                    <div class="main-price">
+                        <div class="before-comma price-text">
+                            9999
+                        </div><div class="after-comma price-text">
+                        ,99
+                    </div>
+                        <div class="right-wrapper">
+                            <div class="ht price-text">€HT</div>
+                            <div class="unit price-text">/unité</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 ### Ajout au panier
 
     <button class="pdb-btn btn-orange add-to-cart">Ajouter au panier</button>
@@ -236,6 +279,113 @@ Pour cacher une cellule en mobile :
     </td>
 
 ### Ligne produit
+
+Le tableau doit être défini avec les classes :
+
+    <table class="product-list-v2">
+        <tr class="header-row">
+            ...
+        </tr>
+        <tr class="row">
+            ...
+        </tr>
+    </table>
+
+L'image, la référence, et le label doivent être définis dans la "main-cell" :
+
+    <td class="main-cell">
+        <div class="product-wrapper">
+            <div class="product-image">
+                <img>
+            </div>
+            <div class="right-block">
+                <div class="label-wrapper">
+                    <a class="product-label" target="_blank">Label</a>
+                </div>
+                <div class="ref-wrapper">
+                    <div class="product-ref">Réf. 99999</div><div class="exception_badge"><div class="tooltip"><span>Exception !</span></div></div>
+                </div>
+                <div class="product-links">
+                    <button>Ajouter à une liste</button>
+                </div>
+            </div>
+        </div>
+        <div class="bundle-wrapper">
+            <div class="bundle-wrapper-title">
+                Ce produit est un lot composé de : <span class="arrow"></span> // Supprimer l'arrow pour une consigne
+            </div>
+            <div class="bundle-components"> // Ajouter la classe deposit si c'est pour une consigne (non depliable)
+                <div class="bundle-component">
+                    <div class="product-wrapper">
+                        <div class="product-image">
+                            <img>
+                        </div>
+                        <div class="right-block">
+                            <div class="label-wrapper">
+                                <span class="bundle-component-quantity">
+                                    x1
+                                </span>
+                                <a class="product-label" target="_blank">Label</a>
+                            </div>
+                            <div class="ref-wrapper">
+                                <span class="product-ref">Réf : 99999</span>
+                            </div>
+                            <div class="product-links">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div
+    </td>
+
+La quantité, le prix unitaire et le prix total doivent être définis dans la "middle-cell" :
+
+    <td class="middle-cell">
+        <div class="middle-cell-wrapper">
+            <div class="unit-price-cell">
+                <div class="header-label">Prix unitaire :</div>
+                <div class="unit-price-wrapper">
+                    <div class="price">4,00 € /</div>
+                    <div class="unit">pièce</div>
+                    <div class="animated discount_super_bundle"><img src="/images/superbundle.svg" alt="Prix dégressif, Lot panaché"></div>
+                    <div class="eco-tax">Dont 3,00€ d'eco taxe</div>
+                    <div class="eco-tax">Dont 1,23€ d'eco mobilier</div>
+                </div>
+                <div class="deposit-price">
+                    <div>20,00 € /</div>
+                    <div>consigne</div>
+                </div>
+            </div>
+            <div class="quantity-cell">
+                <div class="header-label">Quantité :</div>
+                <div class="quantity">
+                    3
+                </div>
+            </div>
+            <div class="total-cell">
+                <div>
+                    <div class="header-label">Total HT :</div>
+                    <div class="total-price">12,00 €</div>
+                </div>
+                // Si il y a une consigne
+                <div class="deposit-price-total">
+                    <div class="header-label">Total Consigne HT :</div>
+                    <div class="total-price">20,00 €</div>
+                </div>
+            </div>
+        </div>
+    </td>
+
+La ligne des titres ("header-row") doit être définie :
+
+    <th class="main-cell">Articles (1)</th>
+    <th class="middle-cell">
+        <div class="unit-price-cell">Prix unitaire (HT)</div>
+        <div class="quantity-cell">Quantité</div>
+        <div class="total-cell">Total</div>
+    </th>
+
 ### Tableau des totaux
 
 Le tableau doit être défini avec la classe :
