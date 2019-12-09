@@ -50,11 +50,30 @@ Cette librairie permet de designer simplement les composants réccurents des sit
 - Tableau de totaux
 - Modales
 
+- Fonts
+- Normalize
+- Icones avec Icomoon
+
 Deux thèmes sont inclus :
 - Standard (*pdb-style*) utilisé sur pdb_node, pdb_hermes, pdb_faf
 - Minimal (*pdb-minimal-style*) utilisé sur pdb_icc, pdb_fce
 
 ## Documentation
+
+### Icones
+
+/IMPORTANT/
+Les icones sont gérées avec Icomoon.
+Pour en ajouter, importer public/dist/assets/icomoon/selection.json sur https://icomoon.io/, apporter les modifications, exporter la font mise à jour, puis remplacer le dossier public/dist/assets/icomoon
+Dans les projets :
+copier `node_modules/@core-techs-git/pdb_style/public/dist/assets/icomoon/fonts/*` dans `public/dist/assets/font`
+copier `node_modules/@core-techs-git/pdb_style/public/dist/assets/icomoon/style.css` dans `public/dist/stylesheets`
+
+### Composants
+
+/IMPORTANT/
+En developpement, les composants peuvent être ajoutés un par un dans le `vendor.css` des projets.
+En prod, seul `pdb-style.css` doit être ajouté dans le vendor des projets. Les fichiers .scss des composants au préalable importés dans `pdb-style.scss`.
 
 ### Header
 
