@@ -55,3 +55,29 @@
     transform: translateX(-50%);
   }
 }
+.left-arrow-tooltip {
+  position: absolute;
+  width: 200px;
+  font-size: 0.875em;
+  background-color: $dark;
+  color: $white;
+  padding: 10px;
+  text-align: center;
+  left: 35px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
+  z-index: 10;
+  &:before{
+    border-style: solid;
+    content: '';
+    position: absolute;
+    display: block;
+    top: calc(50% - 10px);
+    right: 100%;
+    border-width: 10px;
+    border-color: transparent #333 transparent transparent;
+  }
+}
