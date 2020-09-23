@@ -43,6 +43,22 @@
     border-bottom: none;
     @media (max-width: 768px) {
       display: table-row;
+      &.end-row {
+        border-bottom: solid 1px $gray;
+      }
+    }
+  }
+  .mob-actions {
+    > div {
+      width: 75%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+  .breakable-row {
+    @media (max-width: 768px) {
+      border-bottom: none;
     }
   }
 }
