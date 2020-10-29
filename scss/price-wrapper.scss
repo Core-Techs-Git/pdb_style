@@ -53,6 +53,7 @@
   color: $white;
   font-weight: bold;
   text-align: center;
+  vertical-align: middle;
   border-radius: 2px;
 }
 .quantity-prices-wrapper-v3 > .quantity-price-wrapper .inner-price-wrapper {
@@ -133,7 +134,6 @@
 }
 .price-wrapper-v3 .main-price,
 .quantity-prices-wrapper-v3 .main-price {
-  height: 22px;
   line-height: initial;
   display: inline-block;
 }
