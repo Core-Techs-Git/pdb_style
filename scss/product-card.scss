@@ -4,6 +4,10 @@
   border-left: solid 1px $lighten;
   padding-left: 9px;
 }
+.prices-hided .product-card-v3 .actions-wrapper {
+  border-left: none;
+  padding-left: 0;
+}
 .product-card-v3 {
   background-color: $white;
   width: 290px;
