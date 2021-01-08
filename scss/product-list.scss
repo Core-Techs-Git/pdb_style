@@ -2,11 +2,11 @@
 
 .product-list-v2 {
   table-layout: fixed;
+  tr:nth-child(odd) {
+    background-color: #F8F8F8;
+  }
   th, tr {
     border: none!important;
-  }
-  td {
-    background-color: $white!important;
   }
   .product-deleted{
     border-bottom: solid 1px $lighten;
